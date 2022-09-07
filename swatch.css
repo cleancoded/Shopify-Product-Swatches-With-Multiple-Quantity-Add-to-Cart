@@ -1,0 +1,62 @@
+.swatch {
+    margin: 0;
+    display: inline-block;
+    width: 100%;
+}
+.swatch .header {
+  margin: 0.5em 0;
+}
+.swatch input[type="radio"] { 
+  display:none;
+}
+.swatch label {
+  -webkit-border-radius:2px;
+  -moz-border-radius:2px;
+  border-radius:2px;
+  float:left;
+  min-width:50px !important; 
+  height:35px !important;
+  margin:0;
+  border:#ccc 1px solid;
+  font-size:13px;
+  text-align:center;
+  line-height:35px;
+  white-space:nowrap;
+  text-transform:uppercase;
+}
+.swatch-element label { padding:0px; }
+.color.swatch-element label { padding:0; }
+.swatch input[type="radio"]:checked + label {
+      border: 1px solid #000;
+} 
+.swatch .swatch-element {
+  float:left;
+  -webkit-transform:translateZ(0);
+  -webkit-font-smoothing:antialiased;
+  margin:0px 10px 10px 0;
+  position:relative;
+}
+.crossed-out { position:absolute; width:100%; height:100%; left:0; top:0; }
+.swatch .swatch-element .crossed-out { display:none; }
+.swatch .swatch-element.soldout .crossed-out { display:block; }
+.swatch .swatch-element.soldout label {
+  filter: alpha(opacity=60);
+  -khtml-opacity: 0.6;
+  -moz-opacity: 0.6;
+  opacity: 0.6;
+}
+.swatch input[type="number"] {
+    width: 50px;
+    display: block;
+    padding: 0px !important;
+    text-align: center;
+    min-height: 33px;
+    margin: 0 !important;
+}
+.swatch .swatch-element.soldout input[type="number"] {
+    background: url({{'soldout.png' | asset_url}});
+    background-size: 50px 32px;
+}
+.swatch .swatch-element .qty-label {
+    display: block;
+}
